@@ -16,7 +16,6 @@ void PrintArray(int[] array)
 Random Rnd = new Random();
 int Ind = Rnd.Next(10, 20);
 int[] ArrayNumbers = new int[Ind];
-int[] ArrayEven = {0};
 
 for (int i = 0; i < Ind; i++)
 {
@@ -24,5 +23,29 @@ for (int i = 0; i < Ind; i++)
 }
 
 PrintArray(ArrayNumbers);
-Console.WriteLine();
 
+int index = 1;
+
+for (int i = 0; i < Ind; i++)
+{
+    if (ArrayNumbers[i]%2 == 0)
+    {
+        index++;
+    }
+    i++;   
+}
+
+int[] ArrayEven = new int[index];
+int i = 0;
+
+for (int j = 0; j < index; j++)
+{    
+    if (ArrayNumbers[i]%2 == 0)
+    {
+        ArrayEven[j] = ArrayNumbers[i];
+        j++;
+    }
+    i++;
+}
+
+PrintArray(ArrayEven);
