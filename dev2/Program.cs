@@ -48,6 +48,6 @@ for (int i = 0; i < Ind; i++)
 Console.WriteLine();
 if (index == 0)
 {
-    Console.Write("No even numbers");
+    Console.Write("No numbers greater than 8");
 }
 PrintArray(ArrayMoreThanEight);
