@@ -12,3 +12,14 @@ void PrintArray(int[] array)
     }
 }
 
+Random Rnd = new Random();
+int Ind = Rnd.Next(10, 20);
+int[] ArrayNumbers = new int[Ind];
+
+for (int i = 0; i < Ind; i++)
+{
+    ArrayNumbers[i] = Rnd.Next(-10, 10);
+}
+
+PrintArray(ArrayNumbers);
+
