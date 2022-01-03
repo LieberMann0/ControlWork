@@ -18,8 +18,36 @@ int[] ArrayNumbers = new int[Ind];
 
 for (int i = 0; i < Ind; i++)
 {
-    ArrayNumbers[i] = Rnd.Next(-10, 10);
+    ArrayNumbers[i] = Rnd.Next(0, 20);
 }
 
 PrintArray(ArrayNumbers);
 
+int index = 0;
+
+for (int i = 0; i < Ind; i++)
+{
+    if (ArrayNumbers[i] > 8)
+    {
+        index++;
+    }
+}
+
+int[] ArrayMoreThanEight = new int[index];
+index = 0;
+
+for (int i = 0; i < Ind; i++)
+{    
+    if (ArrayNumbers[i] > 8)
+    {
+        ArrayMoreThanEight[index] = ArrayNumbers[i];
+        index++;
+    }
+}
+
+Console.WriteLine();
+if (index == 0)
+{
+    Console.Write("No even numbers");
+}
+PrintArray(ArrayMoreThanEight);
