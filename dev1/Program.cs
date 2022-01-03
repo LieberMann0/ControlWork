@@ -24,28 +24,37 @@ for (int i = 0; i < Ind; i++)
 
 PrintArray(ArrayNumbers);
 
-int index = 1;
+int index = 0;
 
 for (int i = 0; i < Ind; i++)
 {
-    if (ArrayNumbers[i]%2 == 0)
+    if (ArrayNumbers[i] != 0)
     {
-        index++;
+        if (ArrayNumbers[i]%2 == 0)
+        {
+            index++;
+        }
     }
-    i++;   
 }
 
 int[] ArrayEven = new int[index];
-int i = 0;
+index = 0;
 
-for (int j = 0; j < index; j++)
+for (int i = 0; i < Ind; i++)
 {    
-    if (ArrayNumbers[i]%2 == 0)
+    if (ArrayNumbers[i] != 0)
     {
-        ArrayEven[j] = ArrayNumbers[i];
-        j++;
+        if (ArrayNumbers[i]%2 == 0)
+        {
+            ArrayEven[index] = ArrayNumbers[i];
+            index++;
+        }
     }
-    i++;
 }
 
+Console.WriteLine();
+if (index == 0)
+{
+    Console.Write("No even numbers");
+}
 PrintArray(ArrayEven);
